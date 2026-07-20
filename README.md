@@ -154,17 +154,6 @@ Or run the whole pipeline from scratch in **Google Colab**:
 
 ---
 
-## ⚠️ Limitations & Next Steps
-
-- **High-impact recall is low (~14%)** — only 737 historical examples, and by design
-  the model can't see magnitude. Use as a **triage aid, not a sole decision-maker**.
-- Real deployment would benefit from live waveform features (amplitude, P-wave arrival
-  spread) not available in this historical export.
-- **Next steps:** ensembling LightGBM + XGBoost, re-validating on post-2016 USGS data
-  to check for concept drift as monitoring networks have expanded.
-
----
-
 ## 🛠️ Tech Stack
 
 ![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
