@@ -5,11 +5,12 @@
 ### An End-to-End Machine Learning Capstone — Real USGS Data, 9 Models Compared, Live Dashboard
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Live_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://share.streamlit.io)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![LightGBM](https://img.shields.io/badge/LightGBM-Best_Model-02569B?style=for-the-badge)](https://lightgbm.readthedocs.io/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](#license)
 
-**[📊 Results](#-model-results)** · **[⚡ Quickstart](#-quickstart)** · **[📁 Structure](#-repository-structure)**
+**[🚀 Live Demo](#-live-demo)** · **[📊 Results](#-model-results)** · **[⚡ Quickstart](#-quickstart)** · **[📁 Structure](#-repository-structure)**
 
 <img src="reports/figures/eda_overview.png" alt="EDA overview" width="850">
 
@@ -35,6 +36,16 @@ signal quality).
 | 🏆 **Best Model** | LightGBM (tuned) — F1-macro **0.463** on held-out test set |
 | 🖥️ **Dashboard** | Interactive Streamlit app — live prediction + model comparison + explainability |
 | 🔒 **No leakage** | Magnitude drives the label, so it's excluded from features entirely |
+
+---
+
+## 🚀 Live Demo
+
+<div align="center">
+
+### 👉 [**Try the live app here**](https://earthquakeimpactbhargavghoghari.streamlit.app/) 👈
+
+</div>
 
 ---
 
@@ -154,6 +165,7 @@ Or run the whole pipeline from scratch in **Google Colab**:
 
 ---
 
+
 ## 🛠️ Tech Stack
 
 ![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
@@ -168,7 +180,6 @@ Or run the whole pipeline from scratch in **Google Colab**:
 ## 📄 License
 
 Data is USGS public-domain earthquake catalog information. Code released under the MIT License.
-
 
 <div align="center">
 
