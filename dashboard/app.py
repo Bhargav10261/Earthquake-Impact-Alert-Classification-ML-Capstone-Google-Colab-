@@ -40,6 +40,39 @@ st.markdown(f"""
 html, body, [class*="css"] {{
     font-family: 'Inter', sans-serif;
 }}
+
+/* --- Safety net: force readable text color on every native Streamlit element --- */
+h1, h2, h3, h4, h5, h6, p, span, label, li, div,
+.stMarkdown, .stCaption, .stText, .stSelectbox label, .stSlider label,
+.stNumberInput label, .stRadio label, .stTextInput label, .stFileUploader label,
+[data-testid="stMarkdownContainer"], [data-testid="stMetricLabel"],
+[data-testid="stMetricValue"], [data-testid="stMetricDelta"],
+[data-testid="stCaptionContainer"], [data-testid="stWidgetLabel"] p {{
+    color: {TEXT} !important;
+}}
+.stApp, .main, .block-container {{
+    color: {TEXT};
+}}
+/* Native input/select boxes: dark surface, light text (theme sets most of this,
+   this is the explicit fallback in case a component doesn't inherit the theme) */
+.stNumberInput input, .stTextInput input, .stSelectbox div[data-baseweb="select"] > div,
+.stSlider [data-testid="stTickBarMin"], .stSlider [data-testid="stTickBarMax"] {{
+    background-color: {PANEL} !important;
+    color: {TEXT} !important;
+    border-color: {PANEL_BORDER} !important;
+}}
+/* Dataframe / table text */
+[data-testid="stDataFrame"] * {{
+    color: {TEXT} !important;
+}}
+/* Sidebar radio nav text */
+section[data-testid="stSidebar"] label, section[data-testid="stSidebar"] p {{
+    color: {TEXT} !important;
+}}
+/* Muted captions stay muted but still legible */
+[data-testid="stCaptionContainer"] {{
+    color: {MUTED} !important;
+}}
 .stApp {{
     background:
         radial-gradient(circle at 15% 0%, rgba(56,189,248,0.08), transparent 40%),
